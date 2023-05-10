@@ -2,9 +2,9 @@
 
 ## Installation
 - Clone the repository
-- Install dependencies: npm install
+`Install dependencies: npm install`
 ## Usage
-- Start the server: npm start
+`Start the server: npm start`
 - Open http://localhost:5000 in a web browser
 ## API Endpoints
 - POST /api/authenticate perform user authentication and return a JWT token.
@@ -21,15 +21,14 @@
     
 
 ## Running Tests
-Run tests: npm test
+`Run tests: npm test`
 ## Docker
-To build the Docker image, run the following command:
+#### To build the Docker image, run the following command:
 
-- docker build -t myapp:latest .
-To run the Docker container, run the following command:
+`docker build -t myapp:latest`
+#### To run the Docker container, run the following command:
+ `docker run -p 3000:3000 myapp:latest`
 
-
-- docker run -p 3000:3000 myapp:latest
-This will start the app on http://localhost:3000.
+- This will start the app on http://localhost:3000.
 
 
