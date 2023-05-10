@@ -3,34 +3,33 @@
 ## Installation
 - Clone the repository
 - Install dependencies: npm install
-Start the server: npm start
-Usage
-Start the server: npm start
-Open http://localhost:5000 in a web browser
-API Endpoints
-List your API endpoints here, with example requests and responses.
+## Usage
+- Start the server: npm start
+- Open http://localhost:5000 in a web browser
+## API Endpoints
+- POST /api/authenticate perform user authentication and return a JWT token.
+- POST /api/follow/{id} authenticated user would follow user with {id}
+- POST /api/unfollow/{id} authenticated user would unfollow a user with {id}
+- GET /api/user should authenticate the request and return the respective user profile.
+- POST api/posts/ would add a new post created by the authenticated user.
+- DELETE api/posts/{id} would delete post with {id} created by the authenticated user.
+- POST /api/like/{id} would like the post with {id} by the authenticated user.
+- POST /api/unlike/{id} would unlike the post with {id} by the authenticated user.
+- POST /api/comment/{id} add comment for post with {id} by the authenticated user.
+- GET api/posts/{id} would return a single post with {id} populated with its number of likes and comments
+- GET /api/all_posts would return all posts created by authenticated user sorted by post time.
+    
 
-Running Tests
-Install dev dependencies: npm install --dev
+## Running Tests
 Run tests: npm test
-Docker
-Build Image
+## Docker
 To build the Docker image, run the following command:
 
-Copy code
-docker build -t myapp:latest .
-Run Container
+- docker build -t myapp:latest .
 To run the Docker container, run the following command:
 
-arduino
-Copy code
-docker run -p 3000:3000 myapp:latest
+
+- docker run -p 3000:3000 myapp:latest
 This will start the app on http://localhost:3000.
 
-Run Tests in Container
-To run tests inside the Docker container, run the following command:
 
-bash
-Copy code
-docker run -it --rm myapp:latest npm test
-This will start a new container, run the tests, and then remove the container.
